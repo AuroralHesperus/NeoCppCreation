@@ -1,8 +1,8 @@
 {
   "name": "neo-cpp-creation",
-  "displayName": "Neo C++ Creation",
-  "description": "快速创建带基础模板的 C++ 源文件。",
-  "version": "0.1.1",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "version": "1.0.0",
   "publisher": "AuroralHesperus",
   "license": "MIT",
   "keywords": [
@@ -19,14 +19,46 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "%configuration.title%",
+      "properties": {
+        "neoCppCreation.language": {
+          "type": "string",
+          "enum": [
+            "en",
+            "zh-CN",
+            "zh-TW",
+            "ru",
+            "es",
+            "fr"
+          ],
+          "enumTitles": [
+            "%language.english%",
+            "%language.simplifiedChinese%",
+            "%language.traditionalChinese%",
+            "%language.russian%",
+            "%language.spanish%",
+            "%language.french%"
+          ],
+          "default": "zh-CN",
+          "description": "%configuration.language.description%"
+        },
+        "neoCppCreation.commandName": {
+          "type": "string",
+          "default": "newcpp",
+          "description": "%configuration.commandName.description%"
+        }
+      }
+    },
     "commands": [
       {
         "command": "neoCppCreation.createFile",
-        "title": "快速新建 C++ 文件"
+        "title": "%command.createFile.title%"
       },
       {
         "command": "neoCppCreation.newFileAlias",
-        "title": "newcpp"
+        "title": "newcpp",
+        "enablement": "config.neoCppCreation.commandName != ''"
       }
     ]
   },

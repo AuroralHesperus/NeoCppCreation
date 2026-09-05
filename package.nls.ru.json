@@ -1,0 +1,14 @@
+{
+  "extension.displayName": "Neo C++ Creation",
+  "extension.description": "Быстрое создание исходных файлов C++ с базовым шаблоном.",
+  "configuration.title": "Neo C++ Creation",
+  "language.english": "Английский",
+  "language.simplifiedChinese": "Упрощённый китайский",
+  "language.traditionalChinese": "Традиционный китайский",
+  "language.russian": "Русский",
+  "language.spanish": "Испанский",
+  "language.french": "Французский",
+  "configuration.language.description": "Язык диалога создания файлов Neo C++ Creation.",
+  "configuration.commandName.description": "Пользовательское ключевое слово команды для быстрого доступа.",
+  "command.createFile.title": "Создать файл C++"
+}
