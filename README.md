@@ -12,10 +12,8 @@ A lightweight VS Code extension for quickly creating C++ source files with a bas
 ## Usage
 
 1. In VS Code, press `Ctrl+Shift+P` to open the Command Palette.
-2. Run `newcpp`.
-3. Choose a save location and enter a file name. The extension will create and open the file.
-
-The default file name is `main.cpp`.
+2. Run `newcpp` from the Command Palette.
+3. The extension opens a new unsaved C++ editor with the template.
 
 ## Generated Template
 
@@ -44,10 +42,8 @@ int main() {
 ## 使用
 
 1. 在 VS Code 中按 `Ctrl+Shift+P` 打开命令面板。
-2. 运行 `newcpp`。
-3. 选择保存位置并输入文件名，扩展会创建并打开文件。
-
-默认文件名为 `main.cpp`。
+2. 在命令面板中运行“newcpp”。
+3. 扩展会使用 VS Cod 默认方式打开一个未保存的 C++ 编辑器，并填入模板。
 
 ## 生成模板
 

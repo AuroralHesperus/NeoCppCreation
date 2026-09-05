@@ -1,8 +1,8 @@
 {
   "name": "neo-cpp-creation",
-  "displayName": "%extension.displayName%",
-  "description": "%extension.description%",
-  "version": "1.0.0",
+  "displayName": "Neo C++ Creation",
+  "description": "Quickly create a C++ source file with a basic template.",
+  "version": "1.0.2",
   "publisher": "AuroralHesperus",
   "license": "MIT",
   "keywords": [
@@ -14,51 +14,18 @@
   "engines": {
     "vscode": "^1.85.0"
   },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "categories": [
     "Programming Languages"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "configuration": {
-      "title": "%configuration.title%",
-      "properties": {
-        "neoCppCreation.language": {
-          "type": "string",
-          "enum": [
-            "en",
-            "zh-CN",
-            "zh-TW",
-            "ru",
-            "es",
-            "fr"
-          ],
-          "enumTitles": [
-            "%language.english%",
-            "%language.simplifiedChinese%",
-            "%language.traditionalChinese%",
-            "%language.russian%",
-            "%language.spanish%",
-            "%language.french%"
-          ],
-          "default": "zh-CN",
-          "description": "%configuration.language.description%"
-        },
-        "neoCppCreation.commandName": {
-          "type": "string",
-          "default": "newcpp",
-          "description": "%configuration.commandName.description%"
-        }
-      }
-    },
     "commands": [
       {
-        "command": "neoCppCreation.createFile",
-        "title": "%command.createFile.title%"
-      },
-      {
-        "command": "neoCppCreation.newFileAlias",
-        "title": "newcpp",
-        "enablement": "config.neoCppCreation.commandName != ''"
+        "command": "newcpp",
+        "title": "newcpp"
       }
     ]
   },
@@ -68,8 +35,9 @@
     "prepublish": "npm run compile"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.9.2",
     "typescript": "^5.3.0"
   }
 }
